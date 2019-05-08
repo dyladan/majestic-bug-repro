@@ -1,0 +1,42 @@
+{
+  "name": "majestic-bug-repro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "dyladan@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.1.0",
+    "ts-jest": "^24.0.0",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {},
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/dist/"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "setupFiles": [
+      "./test/jest.env.ts"
+    ],
+    "testRegex": "test/(.*)spec.ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
+    "reporters": [
+      "default"
+    ]
+  }
+}
